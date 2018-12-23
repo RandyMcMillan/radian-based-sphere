@@ -56,10 +56,10 @@ print("largeInt            =",largeInt)
 print("global_partition    =",global_partition)
 testSphere = Sphere(largeInt)
 testSphere.printUnitsPerRadian()
-dia = mpz(testSphere.returnDiameter())
-cir = mpz(testSphere.returnCircumference())
-sa = mpz(testSphere.returnSurfaceArea())
-vol = mpz(testSphere.returnVolume())
+dia = mpfr(testSphere.returnDiameter())
+cir = mpfr(testSphere.returnCircumference())
+sa = mpfr(testSphere.returnSurfaceArea())
+vol = mpfr(testSphere.returnVolume())
 
 print("diamater =",dia)
 print("circumference =",cir)
@@ -71,7 +71,7 @@ print("volume =",vol)
 threeHundredSixtyDegrees = 360 # as in degrees
 radian = mpfr(threeHundredSixtyDegrees / (2*math.pi)) # TODO: calc pi better
 halfRadian = mpfr(threeHundredSixtyDegrees / (4*math.pi))
-areaOfCircle = threeHundredSixtyDegrees * ((1/2)*radian) # 10313.24031 Area of Circle in radians
+areaOfCircle = mpfr(threeHundredSixtyDegrees * ((1/2)*radian)) # 10313.24031 Area of Circle in radians
 print("360          =",threeHundredSixtyDegrees)
 print("radian       =",radian,"in degree units")
 print("halfRadian   =",halfRadian,"in degree units")
@@ -86,6 +86,8 @@ class RadianSphere:
         return self.unitsPerRadian * 2
     def returnCircumference(self):
         return self.unitsPerRadian * math.pi * 2
+    
+    #this is where we change methods of calulating attributes of a sphere
     def returnSurfaceArea(self):
         return self.unitsPerRadian * self.unitsPerRadian * 4 * math.pi
     def returnVolume(self):
@@ -93,8 +95,6 @@ class RadianSphere:
     def printUnitsPerRadian(self):
         print("self.unitsPerRadian =",self.unitsPerRadian)
 
-
-largeInt = first_prime*second_prime*third_prime*fourth_prime*fifth_prime*sixth_prime*seventh_prime*eigth_prime
 
 testSphere = RadianSphere(largeInt)
 testSphere.printUnitsPerRadian()
