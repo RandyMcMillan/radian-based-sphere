@@ -104,15 +104,15 @@ class RadianSphere:
     def printUnitsPerRadian(self):
         return None
 
-testSphere = RadianSphere()
-testSphere.printUnitsPerRadian()
-dia = mpfr(testSphere.returnDiameter())
-cir = mpfr(testSphere.returnCircumference())
-sa = mpfr(testSphere.returnSurfaceArea())
-vol = mpfr(testSphere.returnVolume())
+testSphere2 = RadianSphere()
+testSphere2.printUnitsPerRadian()
+dia2 = mpfr(testSphere2.returnDiameter())
+cir2 = mpfr(testSphere2.returnCircumference())
+sa2 = mpfr(testSphere2.returnSurfaceArea())
+vol2 = mpfr(testSphere2.returnVolume())
 
-print("diamater            =",dia,"in degree units")
-print("circumference       =",cir,"in degree units")
-print("surface area        =",sa,"in degree units")
-print("volume              =",vol,"in degree units")
+print("diamater            =",dia2,"in degree units")
+print("circumference       =",cir2,"degree units")
+print("surface area        =",sa2,"in degree units")
+print("volume              =",vol2,"in degree units")
 
