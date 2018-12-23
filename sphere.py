@@ -49,16 +49,21 @@ class Sphere:
         return self.Radius * self.Radius * 4 * math.pi # 4 times pi times radius squared
     def returnVolume(self):
         return (4/3) * math.pi * self.Radius * self.Radius * self.Radius # four thirds times pi times radius cubed
-    def printRadius(self):
-        print("self.Radius         =",self.Radius,"\n")
+    def returnRadius(self):
+        return self.Radius
 
 #largeInt inherits mpz type from large primes enumerated above
 print("global_partition    =",global_partition)
 largeInt = first_prime*second_prime*third_prime*fourth_prime*fifth_prime*sixth_prime*seventh_prime*eigth_prime
 print("largeInt            =",largeInt)
 testSphere = Sphere(largeInt)
-testSphere.printRadius()
+radius = mpz(testSphere.returnRadius())
+
+print("radius              =",radius)
+
 print("All values above are the same.\n")
+
+
 dia = mpz(testSphere.returnDiameter())
 cir = mpz(testSphere.returnCircumference())
 sa = mpz(testSphere.returnSurfaceArea())
@@ -98,9 +103,9 @@ class RadianSphere:
         return threeHundredSixtyDegrees
     #this is where we change methods of calulating attributes of a sphere
     def returnSurfaceArea(self):
-        return threeHundredSixtyDegrees * 4 * (1/2) * radian
+        return threeHundredSixtyDegrees * 4 * (1/2) * radian # or use halfRadian
     def returnVolume(self):
-        return threeHundredSixtyDegrees * 4 * (1/2) * radian * (1/3) * radian
+        return threeHundredSixtyDegrees * 4 * (1/2) * radian * (1/3) * radian # or use halfRadian
     def printUnitsPerRadian(self):
         return None
 
@@ -115,4 +120,12 @@ print("diamater            =",dia2,"degree units")
 print("circumference       =",cir2,"degree units")
 print("surface area        =",sa2,"degree units")
 print("volume              =",vol2,"degree units")
+
+
+#Handling unit conversion
+
+
+
+
+
 
