@@ -19,7 +19,7 @@
 #pip install gmpy2
 import gmpy2,math
 
-from gmpy2 import mpz,mpq,mpfr,mpc,div
+from gmpy2 import * #global * is completely unneccesary mpz,mpfr only is better for this example
 
 #setup some numbers I like
 global_partition = mpz(904625697166532776746648320380374280100293470930272690489102837043110636675);
