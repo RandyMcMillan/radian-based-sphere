@@ -48,12 +48,13 @@ class Sphere:
     def returnVolume(self):
         return (4/3) * math.pi * self.unitsPerRadian * self.unitsPerRadian * self.unitsPerRadian # four thirds times pi times radius cubed
     def printUnitsPerRadian(self):
-        print(self.unitsPerRadian)
+        print("self.unitsPerRadian =",self.unitsPerRadian)
         #print("\n")
 
 #largeInt inherits mpz type from large primes enumerated above
 largeInt = first_prime*second_prime*third_prime*fourth_prime*fifth_prime*sixth_prime*seventh_prime*eigth_prime
-print(largeInt)
+print("largeInt            =",largeInt)
+print("global_partition    =",global_partition)
 testSphere = Sphere(largeInt)
 testSphere.printUnitsPerRadian()
 dia = mpz(testSphere.returnDiameter())
@@ -61,10 +62,10 @@ cir = mpz(testSphere.returnCircumference())
 sa = mpz(testSphere.returnSurfaceArea())
 vol = mpz(testSphere.returnVolume())
 #print("large diameter \n")
-print(dia)
-print(cir)
-print(sa)
-print(vol)
+print("diamater =",dia)
+print("circumference =",cir)
+print("surface area =",sa)
+print("volume =",vol)
 
 
 #formulas to think diffferently about spherical math
@@ -72,10 +73,10 @@ threeHundredSixtyDegrees = 360 # as in degrees
 radian = mpfr(threeHundredSixtyDegrees / (2*math.pi)) # TODO: calc pi better
 halfRadian = mpfr(threeHundredSixtyDegrees / (4*math.pi))
 areaOfCircle = threeHundredSixtyDegrees * ((1/2)*radian) # 10313.24031 Area of Circle in radians
-print(threeHundredSixtyDegrees)
-print(radian)
-print(halfRadian)
-print(areaOfCircle)
+print("360          =",threeHundredSixtyDegrees)
+print("radian       =",radian,"in degree units")
+print("halfRadian   =",halfRadian,"in degree units")
+print("areaOfCircle =",areaOfCircle,"in degree units")
 
 #Radian Based Sphere
 class RadianSphere:
