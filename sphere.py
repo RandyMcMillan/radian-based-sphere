@@ -49,7 +49,6 @@ class Sphere:
         return (4/3) * math.pi * self.unitsPerRadian * self.unitsPerRadian * self.unitsPerRadian # four thirds times pi times radius cubed
     def printUnitsPerRadian(self):
         print("self.unitsPerRadian =",self.unitsPerRadian)
-        #print("\n")
 
 #largeInt inherits mpz type from large primes enumerated above
 largeInt = first_prime*second_prime*third_prime*fourth_prime*fifth_prime*sixth_prime*seventh_prime*eigth_prime
@@ -61,7 +60,7 @@ dia = mpz(testSphere.returnDiameter())
 cir = mpz(testSphere.returnCircumference())
 sa = mpz(testSphere.returnSurfaceArea())
 vol = mpz(testSphere.returnVolume())
-#print("large diameter \n")
+
 print("diamater =",dia)
 print("circumference =",cir)
 print("surface area =",sa)
@@ -92,8 +91,7 @@ class RadianSphere:
     def returnVolume(self):
         return (4/3) * math.pi * self.unitsPerRadian * self.unitsPerRadian * self.unitsPerRadian
     def printUnitsPerRadian(self):
-        print(self.unitsPerRadian)
-#print("\n")
+        print("self.unitsPerRadian =",self.unitsPerRadian)
 
 
 largeInt = first_prime*second_prime*third_prime*fourth_prime*fifth_prime*sixth_prime*seventh_prime*eigth_prime
@@ -104,9 +102,9 @@ dia = mpz(testSphere.returnDiameter())
 cir = mpz(testSphere.returnCircumference())
 sa = mpz(testSphere.returnSurfaceArea())
 vol = mpz(testSphere.returnVolume())
-#print("large diameter \n")
-print(dia)
-print(cir)
-print(sa)
-print(vol)
+
+print("diamater =",dia)
+print("circumference =",cir)
+print("surface area =",sa)
+print("volume =",vol)
 
