@@ -21,7 +21,7 @@ import gmpy2,math
 
 from gmpy2 import * #global * is completely unneccesary mpz,mpfr only is better for this example
 
-#setup some numbers I like
+#setup some large primes I like
 global_partition = mpz(904625697166532776746648320380374280100293470930272690489102837043110636675);
 first_prime = mpz(1623087694307053270266275330414301965675413090185657913);
 second_prime = mpz(6119161);
@@ -34,6 +34,8 @@ eigth_prime = mpz(5*5);
 
 #think of radius as units per radian
 #one radian equals 180 degrees divided by math.pi
+
+print("Begin normal sphere with very large radius.")
 
 class Sphere:
     def __init__(self,unitsPerRadian):
@@ -48,17 +50,15 @@ class Sphere:
     def returnVolume(self):
         return (4/3) * math.pi * self.unitsPerRadian * self.unitsPerRadian * self.unitsPerRadian # four thirds times pi times radius cubed
     def printUnitsPerRadian(self):
-        print("self.unitsPerRadian =",self.unitsPerRadian)
-
-print("Begin normal sphere")
-
+        print("self.unitsPerRadian =",self.unitsPerRadian,"\n")
 
 #largeInt inherits mpz type from large primes enumerated above
+print("global_partition    =",global_partition)
 largeInt = first_prime*second_prime*third_prime*fourth_prime*fifth_prime*sixth_prime*seventh_prime*eigth_prime
 print("largeInt            =",largeInt)
-print("global_partition    =",global_partition)
 testSphere = Sphere(largeInt)
 testSphere.printUnitsPerRadian()
+print("All values above are the same.\n")
 dia = mpz(testSphere.returnDiameter())
 cir = mpz(testSphere.returnCircumference())
 sa = mpz(testSphere.returnSurfaceArea())
@@ -74,14 +74,19 @@ print("\n")
 print("Begin radian based sphere")
 
 #formulas to think diffferently about spherical math
-threeHundredSixtyDegrees = 360 # as in degrees
-radian = mpfr(threeHundredSixtyDegrees / (2*math.pi)) # TODO: calc pi better
-halfRadian = mpfr(threeHundredSixtyDegrees / (4*math.pi))
-areaOfCircle = mpfr(threeHundredSixtyDegrees * ((1/2)*radian)) # 10313.24031 Area of Circle in radians
+threeHundredSixtyDegrees = 360 # This is the circumference of a unit sphere based in degree units.
+radian = mpfr(threeHundredSixtyDegrees / (2*math.pi)) # This is the "radius" of the unit sphere based in degree units.
+#All spheres share the same "radius" which is one (1) radian.
+halfRadian = mpfr(threeHundredSixtyDegrees / (4*math.pi)) # Think about this alittle more and consider how it would be used in the next statement.
+#It is unlikely that you have seen the area of a circle calculated this way.
+areaOfCircle = mpfr(threeHundredSixtyDegrees * ((1/2)*radian)) # 10313.24031 Area of Circle in degree units! Wuh? Remember "units per radian"...
+areaOfCircle2 = mpfr(threeHundredSixtyDegrees * halfRadian)
+
 print("360                 =",threeHundredSixtyDegrees)
 print("radian              =",radian,"in degree units")
 print("halfRadian          =",halfRadian,"in degree units")
 print("areaOfCircle        =",areaOfCircle,"in degree units")
+print("areaOfCircle2       =",areaOfCircle2,"using halfRadian")
 
 #Radian Based Sphere
 class RadianSphere:
