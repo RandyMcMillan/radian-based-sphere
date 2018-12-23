@@ -50,7 +50,7 @@ class Sphere:
     def printUnitsPerRadian(self):
         print("self.unitsPerRadian =",self.unitsPerRadian)
 
-print("Begin normal sphere","\n\n")
+print("Begin normal sphere")
 
 
 #largeInt inherits mpz type from large primes enumerated above
@@ -68,10 +68,10 @@ print("diamater            =",dia)
 print("circumference       =",cir)
 print("surface area        =",sa)
 print("volume              =",vol)
-print("\n\n")
+print("\n")
 
 
-print("Begin radian based sphere","\n\n")
+print("Begin radian based sphere")
 
 #formulas to think diffferently about spherical math
 threeHundredSixtyDegrees = 360 # as in degrees
@@ -106,8 +106,8 @@ cir = mpfr(testSphere.returnCircumference())
 sa = mpfr(testSphere.returnSurfaceArea())
 vol = mpfr(testSphere.returnVolume())
 
-print("diamater            =",dia)
-print("circumference       =",cir)
-print("surface area        =",sa)
-print("volume              =",vol)
+print("diamater            =",dia,"in degree units")
+print("circumference       =",cir,"in degree units")
+print("surface area        =",sa,"in degree units")
+print("volume              =",vol,"in degree units")
 
