@@ -38,26 +38,26 @@ eigth_prime = mpz(5*5);
 print("Begin normal sphere with very large radius.")
 
 class Sphere:
-    def __init__(self,unitsPerRadian):
-        self.unitsPerRadian = unitsPerRadian
+    def __init__(self,Radius):
+        self.Radius = Radius
     #self.unitsPerRadian = unitsPerRadian
     def returnDiameter(self):
-        return self.unitsPerRadian * 2 # 2 times the radius
+        return self.Radius * 2 # 2 times the radius
     def returnCircumference(self):
-        return self.unitsPerRadian * math.pi * 2 # 2 times pi time radius
+        return self.Radius * math.pi * 2 # 2 times pi time radius
     def returnSurfaceArea(self):
-        return self.unitsPerRadian * self.unitsPerRadian * 4 * math.pi # 4 times pi times radius squared
+        return self.Radius * self.Radius * 4 * math.pi # 4 times pi times radius squared
     def returnVolume(self):
-        return (4/3) * math.pi * self.unitsPerRadian * self.unitsPerRadian * self.unitsPerRadian # four thirds times pi times radius cubed
-    def printUnitsPerRadian(self):
-        print("self.unitsPerRadian =",self.unitsPerRadian,"\n")
+        return (4/3) * math.pi * self.Radius * self.Radius * self.Radius # four thirds times pi times radius cubed
+    def printRadius(self):
+        print("self.Radius         =",self.Radius,"\n")
 
 #largeInt inherits mpz type from large primes enumerated above
 print("global_partition    =",global_partition)
 largeInt = first_prime*second_prime*third_prime*fourth_prime*fifth_prime*sixth_prime*seventh_prime*eigth_prime
 print("largeInt            =",largeInt)
 testSphere = Sphere(largeInt)
-testSphere.printUnitsPerRadian()
+testSphere.printRadius()
 print("All values above are the same.\n")
 dia = mpz(testSphere.returnDiameter())
 cir = mpz(testSphere.returnCircumference())
@@ -83,9 +83,9 @@ areaOfCircle = mpfr(threeHundredSixtyDegrees * ((1/2)*radian)) # 10313.24031 Are
 areaOfCircle2 = mpfr(threeHundredSixtyDegrees * halfRadian)
 
 print("360                 =",threeHundredSixtyDegrees)
-print("radian              =",radian,"in degree units")
-print("halfRadian          =",halfRadian,"in degree units")
-print("areaOfCircle        =",areaOfCircle,"in degree units")
+print("radian              =",radian,"degree units")
+print("halfRadian          =",halfRadian,"degree units")
+print("areaOfCircle        =",areaOfCircle,"degree units")
 print("areaOfCircle2       =",areaOfCircle2,"using halfRadian")
 
 #Radian Based Sphere
@@ -111,8 +111,8 @@ cir2 = mpfr(testSphere2.returnCircumference())
 sa2 = mpfr(testSphere2.returnSurfaceArea())
 vol2 = mpfr(testSphere2.returnVolume())
 
-print("diamater            =",dia2,"in degree units")
+print("diamater            =",dia2,"degree units")
 print("circumference       =",cir2,"degree units")
-print("surface area        =",sa2,"in degree units")
-print("volume              =",vol2,"in degree units")
+print("surface area        =",sa2,"degree units")
+print("volume              =",vol2,"degree units")
 
