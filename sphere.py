@@ -123,8 +123,19 @@ print("volume              =",vol2,"degree units")
 
 
 #Handling unit conversion
+print("\nHandling unit conversion.")
 
+newDiameter = mpfr(radius*(dia2/radian))
+newCirc = mpfr(radius*(cir2/radian))
+#newSA = mpfr(radius*(sa2/radian))
+#newVol = mpfr(radius*(vol2/radian))
 
+print("diameter                 =",mpz(newDiameter),"units")
+print("testSphere diameter      =",dia)
+print("circumference            =",mpz(newCirc),"units")
+print("testSphere circumference =",cir)
+#print("surface area        =",newSA,"units")
+#print("volume              =",newVol,"units")
 
 
 
