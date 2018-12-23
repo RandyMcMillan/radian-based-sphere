@@ -66,7 +66,7 @@ print("All values above are the same.\n")
 
 dia = mpz(testSphere.returnDiameter())
 cir = mpz(testSphere.returnCircumference())
-sa = mpz(testSphere.returnSurfaceArea())
+sa  = mpz(testSphere.returnSurfaceArea())
 vol = mpz(testSphere.returnVolume())
 
 print("diamater            =",dia)
@@ -113,7 +113,7 @@ testSphere2 = RadianSphere()
 testSphere2.printUnitsPerRadian()
 dia2 = mpfr(testSphere2.returnDiameter())
 cir2 = mpfr(testSphere2.returnCircumference())
-sa2 = mpfr(testSphere2.returnSurfaceArea())
+sa2  = mpfr(testSphere2.returnSurfaceArea())
 vol2 = mpfr(testSphere2.returnVolume())
 
 print("diamater            =",dia2,"degree units")
