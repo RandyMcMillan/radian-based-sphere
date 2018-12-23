@@ -50,6 +50,9 @@ class Sphere:
     def printUnitsPerRadian(self):
         print("self.unitsPerRadian =",self.unitsPerRadian)
 
+print("Begin normal sphere","\n\n")
+
+
 #largeInt inherits mpz type from large primes enumerated above
 largeInt = first_prime*second_prime*third_prime*fourth_prime*fifth_prime*sixth_prime*seventh_prime*eigth_prime
 print("largeInt            =",largeInt)
@@ -61,21 +64,24 @@ cir = mpz(testSphere.returnCircumference())
 sa = mpz(testSphere.returnSurfaceArea())
 vol = mpz(testSphere.returnVolume())
 
-print("diamater =",dia)
-print("circumference =",cir)
-print("surface area =",sa)
-print("volume =",vol)
+print("diamater            =",dia)
+print("circumference       =",cir)
+print("surface area        =",sa)
+print("volume              =",vol)
+print("\n\n")
 
+
+print("Begin radian based sphere","\n\n")
 
 #formulas to think diffferently about spherical math
 threeHundredSixtyDegrees = 360 # as in degrees
 radian = mpfr(threeHundredSixtyDegrees / (2*math.pi)) # TODO: calc pi better
 halfRadian = mpfr(threeHundredSixtyDegrees / (4*math.pi))
 areaOfCircle = mpfr(threeHundredSixtyDegrees * ((1/2)*radian)) # 10313.24031 Area of Circle in radians
-print("360          =",threeHundredSixtyDegrees)
-print("radian       =",radian,"in degree units")
-print("halfRadian   =",halfRadian,"in degree units")
-print("areaOfCircle =",areaOfCircle,"in degree units")
+print("360                 =",threeHundredSixtyDegrees)
+print("radian              =",radian,"in degree units")
+print("halfRadian          =",halfRadian,"in degree units")
+print("areaOfCircle        =",areaOfCircle,"in degree units")
 
 #Radian Based Sphere
 class RadianSphere:
@@ -100,8 +106,8 @@ cir = mpfr(testSphere.returnCircumference())
 sa = mpfr(testSphere.returnSurfaceArea())
 vol = mpfr(testSphere.returnVolume())
 
-print("diamater =",dia)
-print("circumference =",cir)
-print("surface area =",sa)
-print("volume =",vol)
+print("diamater            =",dia)
+print("circumference       =",cir)
+print("surface area        =",sa)
+print("volume              =",vol)
 
