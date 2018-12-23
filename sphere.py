@@ -79,29 +79,26 @@ print("areaOfCircle =",areaOfCircle,"in degree units")
 
 #Radian Based Sphere
 class RadianSphere:
-    def __init__(self,unitsPerRadian):
-        self.unitsPerRadian = unitsPerRadian
-    #self.unitsPerRadian = unitsPerRadian
+    def __init__(self):
+        return None
     def returnDiameter(self):
-        return self.unitsPerRadian * 2
+        return 2*radian
     def returnCircumference(self):
-        return self.unitsPerRadian * math.pi * 2
-    
+        return threeHundredSixtyDegrees
     #this is where we change methods of calulating attributes of a sphere
     def returnSurfaceArea(self):
-        return self.unitsPerRadian * self.unitsPerRadian * 4 * math.pi
+        return threeHundredSixtyDegrees * 4 * (1/2) * radian
     def returnVolume(self):
-        return (4/3) * math.pi * self.unitsPerRadian * self.unitsPerRadian * self.unitsPerRadian
+        return threeHundredSixtyDegrees * 4 * (1/2) * radian * (1/3) * radian
     def printUnitsPerRadian(self):
-        print("self.unitsPerRadian =",self.unitsPerRadian)
+        return None
 
-
-testSphere = RadianSphere(largeInt)
+testSphere = RadianSphere()
 testSphere.printUnitsPerRadian()
-dia = mpz(testSphere.returnDiameter())
-cir = mpz(testSphere.returnCircumference())
-sa = mpz(testSphere.returnSurfaceArea())
-vol = mpz(testSphere.returnVolume())
+dia = mpfr(testSphere.returnDiameter())
+cir = mpfr(testSphere.returnCircumference())
+sa = mpfr(testSphere.returnSurfaceArea())
+vol = mpfr(testSphere.returnVolume())
 
 print("diamater =",dia)
 print("circumference =",cir)
